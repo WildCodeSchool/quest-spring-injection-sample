@@ -23,7 +23,7 @@ public class VideoReviewRepository implements ReviewRepository {
     public void review() {
         String[] reviews = {
             "Terrific, this is so great!",
-            "Don't forget to like, subscribe, comment, hit the notification, clear your cookies...",
+            "Don't forget to like, subscribe, comment, hit the notification bell...",
             "What the heck am I doing?!"
         };
         Random rand = new Random();
