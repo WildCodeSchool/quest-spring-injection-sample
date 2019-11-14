@@ -28,7 +28,7 @@ public class ArticleReviewRepository implements ReviewRepository {
             "So-so...",
         };
         Random rand = new Random();
-        review.setContent(reviews[rand.nextInt(2)]);
+        review.setContent(reviews[rand.nextInt(3)]);
         review.setScore(new Random().nextInt(6));
     }
 

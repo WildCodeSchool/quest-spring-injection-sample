@@ -27,7 +27,7 @@ public class VideoReviewRepository implements ReviewRepository {
             "What the heck am I doing?!"
         };
         Random rand = new Random();
-        review.setContent(reviews[rand.nextInt(2)]);
+        review.setContent(reviews[rand.nextInt(3)]);
         review.setScore(new Random().nextInt(6));
     }
 
