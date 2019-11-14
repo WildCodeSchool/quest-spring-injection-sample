@@ -23,8 +23,8 @@ public class ArticleReviewRepository implements ReviewRepository {
     @Override
     public void review() {
         String[] reviews = {
-            "Worst game ever made !",
-            "Best game ever made !",
+            "Worst game ever made!",
+            "Best game ever made!",
             "So-so...",
         };
         Random rand = new Random();
