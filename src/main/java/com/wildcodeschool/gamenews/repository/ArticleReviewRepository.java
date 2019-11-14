@@ -1,6 +1,5 @@
 package com.wildcodeschool.gamenews.repository;
 
-import com.wildcodeschool.gamenews.model.ArticleReview;
 import com.wildcodeschool.gamenews.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Random;
 
 @Repository
-public class ArticleReviewRepository implements ReviewRepository {
+public class ArticleReviewRepository implements ReviewDao {
 
     @Autowired
     @Qualifier("articleReview")

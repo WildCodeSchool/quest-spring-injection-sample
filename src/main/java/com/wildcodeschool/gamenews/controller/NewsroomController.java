@@ -1,7 +1,7 @@
 package com.wildcodeschool.gamenews.controller;
 
 import com.wildcodeschool.gamenews.model.Review;
-import com.wildcodeschool.gamenews.repository.ReviewRepository;
+import com.wildcodeschool.gamenews.repository.ReviewDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ public class NewsroomController {
     @Autowired
     // TODO : test with "videoReviewRepository" qualifier
     @Qualifier("articleReviewRepository")
-    private ReviewRepository repository;
+    private ReviewDao repository;
 
     @GetMapping("/review")
     @ResponseBody

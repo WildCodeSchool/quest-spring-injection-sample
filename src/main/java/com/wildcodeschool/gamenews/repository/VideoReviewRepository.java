@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Random;
 
 @Repository
-public class VideoReviewRepository implements ReviewRepository {
+public class VideoReviewRepository implements ReviewDao {
 
     @Autowired
     @Qualifier("videoReview")

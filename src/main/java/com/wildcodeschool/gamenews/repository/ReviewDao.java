@@ -2,7 +2,7 @@ package com.wildcodeschool.gamenews.repository;
 
 import com.wildcodeschool.gamenews.model.Review;
 
-public interface ReviewRepository {
+public interface ReviewDao {
 
     void sendGame(String game);
 
