@@ -1,7 +1,6 @@
 package com.wildcodeschool.gamenews.repository;
 
 import com.wildcodeschool.gamenews.model.Review;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
@@ -10,9 +9,13 @@ import java.util.Random;
 @Repository
 public class ArticleReviewRepository implements ReviewDao {
 
-    @Autowired
-    @Qualifier("articleReview")
-    private Review review;
+    private final Review review;
+
+    public ArticleReviewRepository(
+            @Qualifier("articleReview") Review reviewInjected
+    ) {
+        this.review = reviewInjected;
+    }
 
     @Override
     public void sendGame(String game) {
@@ -22,9 +25,9 @@ public class ArticleReviewRepository implements ReviewDao {
     @Override
     public void review() {
         String[] reviews = {
-            "Worst game ever made!",
-            "Best game ever made!",
-            "So-so...",
+                "Worst game ever made!",
+                "Best game ever made!",
+                "So-so...",
         };
         Random rand = new Random();
         review.setContent(reviews[rand.nextInt(3)]);
